@@ -1,0 +1,60 @@
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth; }
+
+.tituloPrincipal{
+    text-align: center;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    font-size: 4rem
+}
+
+.logo{
+    width: 12rem;
+    height: 12rem;
+}
+
+body {
+    background: lightgray;
+    font-size: 2rem;
+    line-height: 1.5;
+    font-family: 'Roboto Mono', monospace;
+    color: black; 
+}
+
+.footer{
+    background-color: #212529;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.nuestrasRedes{
+
+    font-style: italic;
+    font-size: 2.5rem;
+
+}
+
+.botonContacto{
+
+    color: white;
+
+}
+
+.ziseImput{
+
+    font-size: 1.8rem;
+
+}
+
+.cardText{
+    font-family: 'Slackey', cursive;
+    font-size: 1.8rem;
+    color: #2D6960;
+    
+}
+
+.bgCard{
+    background-color:#CDCD6B ;
+}
