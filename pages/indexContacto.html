@@ -49,12 +49,12 @@
     
                 <h1 class="text-center">Dejanos tu cosulta</h1>
     
-                    <form action="GET" class="row" class="col-12 ">
+                    <form class="row" class="col-12 ">
     
                         <div class="row my-4">
         
                                 <div class="col-md-6 mx-auto">
-                                    <input type="text" class="form-control" placeholder="NOMBRE" data-sb-validations="required,nombre" aria-label="NOMBRE">
+                                    <input type="text" class="form-control" placeholder="NOMBRE" data-sb-validations="required,nombre" aria-label="NOMBRE" id="nombre">
                                 </div>
         
                         </div>
@@ -63,7 +63,7 @@
         
                                     <div class="col-md-6 mx-auto">
                                         <input type="email" class="form-control  my-5" placeholder="EMAIL" data-sb-validations="required,email" id="inputEmail4">
-                                        <input type="text" class="form-control my-5" placeholder="TELEFONO" data-sb-validations="required,telefono"aria-label="TELEFONO" >
+                                        <input type="text" class="form-control my-5" placeholder="TELEFONO" data-sb-validations="required,telefono"aria-label="TELEFONO" id="telefono" >
                                     </div>
 
                         </div>
@@ -71,9 +71,9 @@
                         <div>
     
                             <div class="col-md-6 my-4 mx-auto text-center">
-                                <label for="" class="my-3">¿CÓMO NOS CONOCIO?</label>
+                                <label for="" class="my-3" id="redesSociales">¿CÓMO NOS CONOCIO?</label>
                             </div>
-                            <select class="form-select w-50 mx-auto  mb-5" aria-label="floating label select example">
+                            <select class="form-select w-50 mx-auto  mb-5" aria-label="floating label select example" >
                                 <option value="1">FACEBOOK</option>
                                 <option value="2">TWITTER</option>
                                 <option value="3">INSTAGRAM</option>
@@ -84,7 +84,7 @@
                         <div class="form-floating my-5 text-center ">
 
                             <div>
-                                <label for="" class="my-5"> TU CONSULTA NO MOLESTA</label>
+                                <label for="" class="my-5" id="consulta"> TU CONSULTA NO MOLESTA</label>
                             </div>
     
                             <div class="col-md-6 mx-auto">
@@ -96,7 +96,7 @@
 
                         <div class="my-4 mx-3 text-center">
 
-                            <button type="submit" class="bg-dark botonContacto py-1">ENVIAR</button>
+                            <button type="submit" class="bg-dark botonContacto py-1" onclick="validarConsulta()">ENVIAR</button>
 
                         </div>
     
