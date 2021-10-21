@@ -19,11 +19,11 @@ let prestamosDados = [];
 
 for (let i = 0 ; i < 3 ; i++){
 
-    let nombre = prompt("Ingrese su nombrte");
-    let edad = prompt("Ingrese su edad");
-    let dni = prompt("Ingrese su DNI");
-    let cantidadSolicitada = parseInt (prompt("Ingrese el monto que desea"));
-    let cantidadCuotas = parseInt (prompt("Ingrese la cantidad de cuotas en las que puede pagar"));
+    let nombre = document.getElementById("nomYape").value;
+    let edad = document.getElementById("eDad").value;
+    let dni = document.getElementById("ingDni").value;
+    let cantidadSolicitada = document.getElementById("montoSolicitado").value;
+    let cantidadCuotas = document.getElementById("cuotasnumero").value;
 
     prestamosDados.push( new Prestamos (nombre , edad , dni , cantidadSolicitada , cantidadCuotas ) );
 
@@ -44,51 +44,4 @@ for (let clientes of prestamosDados){
 } 
 
 
-function Filtrar (){
 
-let ordenar = parseInt ( prompt("Filtrar por Precio o Nombre") );
-
-if (ordenar = "precio"){
-
-alert ("Elegiste por precio")
-
-prestamosDados.sort(function(p1 , p2){
-
-    if (p1.cantidadSolicitada < p2.cantidadSolicitada)
-    return 1;
-
-    else if (p1.cantidadSolicitada > p2.cantidadSolicitada){
-        return -1;
-    }else{
-        return 0;
-    }
-
-})
-
-console.log (prestamosDados)
-
-} else if (ordenar = "nombre"){
-
-
-    alert ("Elegiste por nombre")
-
-prestamosDados.sort(function(p1 , p2){
-
-    if (p1.nombre > p2.nombre)
-    return 1;
-
-    else if (p1.nombre < p2.nombre){
-        return -1;
-    }else{
-        return 0;
-    }
-
-});
-
-console.log (prestamosDados)
-
-}
-
-}
-
-Filtrar ()

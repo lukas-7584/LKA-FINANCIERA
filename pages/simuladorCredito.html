@@ -45,14 +45,14 @@
 
             <h1 class="text-center">SIMULA TU CREDITO</h1>
 
-                <form action="GET" class="row" class="col-12 ">
+                <form  class="row" class="col-12 ">
 
                     <div class="row">
 
                             <div class="col-md-6 mx-auto ">
-                                <input type="text" class="form-control ziseImput my-5" placeholder="NOMBRE Y APELLIDO" data-sb-validations="required,nombre" aria-label="NOMBRE Y APELLIDO">
-                                <input type="text" class="form-control ziseImput my-5" placeholder="INGRESE SU DNI" data-sb-validations="required,dni" aria-label="INGRESE SU DNI">
-                                <input type="text" class="form-control ziseImput my-5" placeholder="INGRESE SU EDAD" data-sb-validations="required,edad" aria-label="INGRESE SU EDAD">
+                                <input type="text" class="form-control ziseImput my-5" placeholder="NOMBRE Y APELLIDO" data-sb-validations="required,nombre" aria-label="NOMBRE Y APELLIDO" id="nomYape">
+                                <input type="text" class="form-control ziseImput my-5" placeholder="INGRESE SU DNI" data-sb-validations="required,dni" aria-label="INGRESE SU DNI" id="ingDni">
+                                <input type="text" class="form-control ziseImput my-5" placeholder="INGRESE SU EDAD" data-sb-validations="required,edad" aria-label="INGRESE SU EDAD" id="eDad">
                             </div>
 
 
@@ -61,8 +61,8 @@
                     <div class="row">
 
                                 <div class="col-md-6 mx-auto">
-                                    <input type="text"class="form-control ziseImput my-5"  placeholder="MONTO QUE DESA SOLICITAR" data-sb-validations="required,number" >
-                                    <input type="text" class="form-control ziseImput my-5" placeholder="CANTIDAD DE CUOTAS QUE DESEA PAGAR" data-sb-validations="required,number" >
+                                    <input type="text"class="form-control ziseImput my-5"  placeholder="MONTO QUE DESA SOLICITAR" data-sb-validations="required,number" id="montoSolicitado" >
+                                    <input type="text" class="form-control ziseImput my-5" placeholder="CANTIDAD DE CUOTAS QUE DESEA PAGAR" data-sb-validations="required,number" id="cuotasnumero" >
                                 </div>
 
                     </div>
@@ -71,7 +71,7 @@
 
                         <div class="my-4 mx-3 text-center">
 
-                            <button type="submit" class="bg-dark botonContacto py-1">CALCULAR</button>
+                            <button type="submit" class="bg-dark botonContacto py-1" onclick="Prestampos()">CALCULAR</button>
                         </div>
 
                 </form>
