@@ -13,11 +13,9 @@ class Prestamos{
 
     }
 }
-
+function procesar(){
 
 let prestamosDados = [];
-
-for (let i = 0 ; i < 3 ; i++){
 
     let nombre = document.getElementById("nomYape").value;
     let edad = document.getElementById("eDad").value;
@@ -25,23 +23,28 @@ for (let i = 0 ; i < 3 ; i++){
     let cantidadSolicitada = document.getElementById("montoSolicitado").value;
     let cantidadCuotas = document.getElementById("cuotasnumero").value;
 
-    prestamosDados.push( new Prestamos (nombre , edad , dni , cantidadSolicitada , cantidadCuotas ) );
+    prestamosDados.push( new Prestamos (nombre , edad , dni , cantidadSolicitada , cantidadCuotas) );
 
-}
+    function valorCuota() {
 
-console.log (prestamosDados);
+        let totaldelaCuota =  cantidadSolicitada.value / cantidadCuotas.value;
+
+    }
+
+    valorCuota( )
 
 
-
-for (let clientes of prestamosDados){
+    for(let clientes of prestamosDados){
 
     console.log("Hola soy el alumno/a: " + clientes.nombre);
     console.log("Mi edad es: " + clientes.edad);
     console.log("Mi DNI es: " + clientes.dni);
     console.log("Deseo sacar la cantidad de "  + "pesos  " + clientes.cantidadSolicitada);
     console.log("EN  "  + "cuotas  "  + clientes.cantidadCuotas);
+    console.log("El valor de la  "  + "cuotas  ser $  "  + clientes.valorCuota);
 
 } 
 
-
+console.log(prestamosDados);
+}
 
