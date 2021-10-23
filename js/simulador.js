@@ -22,12 +22,14 @@ let prestamosDados = [];
     let dni = document.getElementById("ingDni").value;
     let cantidadSolicitada = document.getElementById("montoSolicitado").value;
     let cantidadCuotas = document.getElementById("cuotasnumero").value;
+    let totaldelaCuota = document.getElementById("montoSolicitado").value / document.getElementById("cuotasnumero").value;
 
     prestamosDados.push( new Prestamos (nombre , edad , dni , cantidadSolicitada , cantidadCuotas) );
 
     function valorCuota() {
 
-        let totaldelaCuota =  cantidadSolicitada.value / cantidadCuotas.value;
+        let totaldelaCuota =  cantidadSolicitada / cantidadCuotas;
+        totaldelaCuota
 
     }
 
@@ -36,12 +38,19 @@ let prestamosDados = [];
 
     for(let clientes of prestamosDados){
 
-    console.log("Hola soy el alumno/a: " + clientes.nombre);
-    console.log("Mi edad es: " + clientes.edad);
-    console.log("Mi DNI es: " + clientes.dni);
-    console.log("Deseo sacar la cantidad de "  + "pesos  " + clientes.cantidadSolicitada);
+    console.log("El nombre del clientes es: " + clientes.nombre);
+    console.log("Su edad es: " + clientes.edad);
+    console.log("Y su  DNI es: " + clientes.dni);
+    console.log("Desea sacar la cantidad de "  + "pesos  " + clientes.cantidadSolicitada);
     console.log("EN  "  + "cuotas  "  + clientes.cantidadCuotas);
-    console.log("El valor de la  "  + "cuotas  ser $  "  + clientes.valorCuota);
+    console.log("El valor de la  "  + "cuotas  será $  "  + totaldelaCuota);
+
+
+    let contenedor = document.getElementById ("contenedor");
+    contenedor.innerHTML = `<h2>Hola buenos días </h2>
+                            <p> Señor  ${nombre}</p>
+                            <p> Para el  monto ${ "$" + cantidadSolicitada}</p>
+                            <p> el  valor de la  cuota ${totaldelaCuota}</p>`
 
 } 
 
