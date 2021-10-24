@@ -7,7 +7,14 @@ function validarConsulta () {
     let consulta  =  document.getElementById("consulta").value;
 
     if (nombre || email || telefono || comoConocio || consulta != "") {
-        alert("En breve nos estaremos comunicando con usted, muchas gracias por elegirnos")
+
+        let parrafo = document.createElement("p");
+        parrafo.innerHTML = "En breve nos estaremos comunicando con usted, muchas gracias por elegirnos";
+
+        let mensaje = document.getElementById("mensaje");
+        mensaje.appendChild(parrafo);
+
+
     }
 
     
