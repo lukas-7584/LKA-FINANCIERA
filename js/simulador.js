@@ -23,37 +23,30 @@ let prestamosDados = [];
     let cantidadSolicitada = document.getElementById("montoSolicitado").value;
     let cantidadCuotas = document.getElementById("cuotasnumero").value;
     let totaldelaCuota = document.getElementById("montoSolicitado").value / document.getElementById("cuotasnumero").value;
+    let inTeres  = document.getElementById("INT"). value; 
+    let interesApagar = document.getElementById("montoSolicitado").value * document.getElementById("INT").value; 
+    let montoTotal = cantidadSolicitada + interesApagar;
 
     prestamosDados.push( new Prestamos (nombre , edad , dni , cantidadSolicitada , cantidadCuotas) );
 
     function valorCuota() {
 
-        let totaldelaCuota =  cantidadSolicitada / cantidadCuotas;
+        let totaldelaCuota = ( cantidadSolicitada * inTeres) + cantidadSolicitada / cantidadCuotas;
         totaldelaCuota
+
+        let interesApagar = cantidadSolicitada * inTeres;
+        interesApagar
 
     }
 
     valorCuota( )
 
 
-    for(let clientes of prestamosDados){
+        let contenedor = document.getElementById ("contenedor");
 
-    console.log("El nombre del clientes es: " + clientes.nombre);
-    console.log("Su edad es: " + clientes.edad);
-    console.log("Y su  DNI es: " + clientes.dni);
-    console.log("Desea sacar la cantidad de "  + "pesos  " + clientes.cantidadSolicitada);
-    console.log("EN  "  + "cuotas  "  + clientes.cantidadCuotas);
-    console.log("El valor de la  "  + "cuotas  será $  "  + totaldelaCuota);
-
-
-    let contenedor = document.getElementById ("contenedor");
-    contenedor.innerHTML = `<h2>Hola buenos días </h2>
-                            <p> Señor  ${nombre}</p>
-                            <p> Para el  monto ${ "$" + cantidadSolicitada}</p>
-                            <p> el  valor de la  cuota ${totaldelaCuota}</p>`
+    contenedor.innerHTML = `<h2>Hola buenos días señor ${nombre} </h2>
+                            <p>Para el  monto ${ "$" + cantidadSolicitada} el  valor con interes es ${ "$" + interesApagar}</p>
+                            <p> el valor de las cuotas será de ${ "$" + totaldelaCuota} y el monto total es de ${montoTotal}</p>`
 
 } 
-
-console.log(prestamosDados);
-}
 
