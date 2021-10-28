@@ -10,7 +10,9 @@ class Prestamos{
 
     }
 }
-function procesar(){
+function procesar(e){
+
+    e.preventDefault();
 
 let prestamosDados = [];
 
@@ -21,13 +23,14 @@ let prestamosDados = [];
     let cantidadCuotas =  parseInt( document.getElementById("cuotasnumero").value);    
     let inTeres  = parseInt(  document.getElementById("INT"). value); 
     let interesApagar = parseInt( document.getElementById("montoSolicitado").value )* parseInt( document.getElementById("INT").value); 
-    let montoTotal = parseInt (document.getElementById("montoSolicitado").value) + parseInt( document.getElementById("montoSolicitado").value * document.getElementById("INT").value)
+    let montoTotal = parseInt (document.getElementById("montoSolicitado").value) + parseInt( (montoSolicitado.value * document.getElementById("INT").value) )
     let totaldelaCuota = parseInt (montoTotal) / parseInt( document.getElementById("cuotasnumero").value);
 
 
     prestamosDados.push( new Prestamos (nombre , edad , dni , cantidadSolicitada , cantidadCuotas) );
+    console.log (prestamosDados);
 
-    function valorCuota() {
+    function valorCuota(e) {
 
         let interesApagar = cantidadSolicitada * inTeres;
         interesApagar
@@ -50,3 +53,5 @@ let prestamosDados = [];
 
 } 
 
+let botonEnviar = document.getElementById("botonEnviar");
+botonEnviar.addEventListener("click" , procesar);
