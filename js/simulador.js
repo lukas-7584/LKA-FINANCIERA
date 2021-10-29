@@ -22,8 +22,8 @@ let prestamosDados = [];
     let cantidadSolicitada =  parseInt( document.getElementById("montoSolicitado").value);
     let cantidadCuotas =  parseInt( document.getElementById("cuotasnumero").value);    
     let inTeres  = parseInt(  document.getElementById("INT"). value); 
-    let interesApagar = parseInt( document.getElementById("montoSolicitado").value )* parseInt( document.getElementById("INT").value); 
-    let montoTotal = parseInt (document.getElementById("montoSolicitado").value) + parseInt( (montoSolicitado.value * document.getElementById("INT").value) )
+    let interesApagar = parseInt( document.getElementById("montoSolicitado").value ) * parseInt( document.getElementById("INT").value) / 100; 
+    let montoTotal = parseInt (document.getElementById("montoSolicitado").value) + parseInt( (montoSolicitado.value * document.getElementById("INT").value / 100) )
     let totaldelaCuota = parseInt (montoTotal) / parseInt( document.getElementById("cuotasnumero").value);
 
 
@@ -32,7 +32,7 @@ let prestamosDados = [];
 
     function valorCuota(e) {
 
-        let interesApagar = cantidadSolicitada * inTeres;
+        let interesApagar = cantidadSolicitada * inTeres ;
         interesApagar
 
 
@@ -47,11 +47,22 @@ let prestamosDados = [];
 
         let contenedor = document.getElementById ("contenedor");
 
-    contenedor.innerHTML = `<h2>Hola buenos días señor ${nombre} </h2>
-                            <p>Para el  monto ${ "$" + cantidadSolicitada} el interes es ${ "$" + interesApagar}</p>
-                            <p> El valor de las cuotas será de ${ "$" + totaldelaCuota} y el monto total es de ${ "$" + montoTotal}</p>`
+
+        for (clientes  of prestamosDados) {
+                            
+            contenedor.innerHTML = 
+                                    `<h2>Hola buenos días señor ${nombre} con DNI ${dni} y con ${ edad} años </h2>
+                                    <p>Para el  monto ${ "$" + cantidadSolicitada} el interes es ${ "$" + interesApagar}</p>
+                                    <p> La cantidaad de cuotas seran ${cantidadCuotas}</p>
+                                    <p> El valor de las cuotas será de ${ "$" + totaldelaCuota} y el monto total es de ${ "$" + montoTotal}</p>`;
+            
+            }
+        
 
 } 
 
 let botonEnviar = document.getElementById("botonEnviar");
 botonEnviar.addEventListener("click" , procesar);
+
+
+
