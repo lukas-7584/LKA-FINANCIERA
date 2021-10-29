@@ -26,6 +26,15 @@ let prestamosDados = [];
     let montoTotal = parseInt (document.getElementById("montoSolicitado").value) + parseInt( (montoSolicitado.value * document.getElementById("INT").value / 100) )
     let totaldelaCuota = parseInt (montoTotal) / parseInt( document.getElementById("cuotasnumero").value);
 
+    localStorage.setItem( dni , nombre)
+
+        for (let i = 0 ; i < localStorage.length ; i++){
+
+        let clave = localStorage.key (i);
+        console.log ("clave: " + clave);
+        console.log("valor: " + localStorage.getItem(clave));
+    }
+
 
     prestamosDados.push( new Prestamos (nombre , edad , dni , cantidadSolicitada , cantidadCuotas) );
     console.log (prestamosDados);
