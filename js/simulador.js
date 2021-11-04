@@ -1,4 +1,5 @@
 
+
 class Prestamos{
     constructor(nombre , edad , dni , cantidadSolicitada , cantidadCuotas){
 
@@ -10,11 +11,27 @@ class Prestamos{
 
     }
 }
+
+
+var prestamosDados = [];
+
 function procesar(e){
 
     e.preventDefault();
 
-let prestamosDados = [];
+        if (localStorage.getItem("Lista de Clientes") != null){
+
+
+        var local= JSON.parse( localStorage.getItem("Lista de Clientes"));
+        
+        for (item of local){
+            prestamosDados.push ( item);
+            console.log (local);
+            console.log (prestamosDados);
+        }
+
+    }
+
 
     let nombre = document.getElementById("nomYape").value;
     let edad = document.getElementById("eDad").value;
