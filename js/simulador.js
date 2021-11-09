@@ -81,8 +81,6 @@ function procesar(e){
 
 } 
 
-let botonEnviar = document.getElementById("botonEnviar");
-botonEnviar.addEventListener("click" , procesar);
-
+$("#botonEnviar").on("click" , procesar)
 
 
