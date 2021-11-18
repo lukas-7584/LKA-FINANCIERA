@@ -7,7 +7,7 @@ html {
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: italic;
-    font-size: 4rem
+    font-size: 4rem;
 }
 
 .logo{
@@ -69,9 +69,18 @@ body {
 
 }
 
+.nav-link{
+    transition: transform 2s;
+}
+
+.nav-link:hover{
+
+    transform: scale(1.5);
+
+}
 
 .cambio{
-    font-size: 14px;
+    font-size:1.5rem;
     padding: 0 10px;
     font-weight: 600;
 }
@@ -79,6 +88,7 @@ body {
 .btn{
     background-color: green;
     color: white;
+    font-size: 1.5rem;
 }
 
 .taza-cambio-container{
@@ -86,3 +96,10 @@ body {
     align-items: center;
     justify-content: center
 }
+
+.imgConver{
+
+    border-radius:25rem;
+
+}
+

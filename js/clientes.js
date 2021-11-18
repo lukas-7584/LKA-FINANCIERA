@@ -1,5 +1,5 @@
 
-$("#relatoClientes").fadeOut()
+$("#relatoClientes").hide()
 
 $("#mostrarRelato")
         .click(function(){
@@ -8,8 +8,7 @@ $("#mostrarRelato")
 
             .css("color" ,  "blue")
 
-            .fadeToggle(2000)
-
+            .slideToggle(2000)
 
 
         })
