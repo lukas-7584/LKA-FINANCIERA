@@ -62,3 +62,27 @@ body {
 .botonClientes{
     background-color: orange;
 }
+
+.navText{
+
+    font-size:1.5rem
+
+}
+
+
+.cambio{
+    font-size: 14px;
+    padding: 0 10px;
+    font-weight: 600;
+}
+
+.btn{
+    background-color: green;
+    color: white;
+}
+
+.taza-cambio-container{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
