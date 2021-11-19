@@ -1,4 +1,5 @@
 
+//--------------        ANIMACION PARA LA PRIMER IMAGEN      -----------------------////////
 $("#relatoClientes").hide()
 
 $("#mostrarRelato")
@@ -13,6 +14,8 @@ $("#mostrarRelato")
 
         })
 
+
+//--------------        ANIMACION PARA LA SEGUNDA IMAGEN      -----------------------////////
 
         $("#relatoCliente2").hide()
 
@@ -29,6 +32,8 @@ $("#mostrarRelato")
 
                 })
 
+
+//--------------        ANIMACION PARA LA TERCER IMAGEN      -----------------------////////
 
                 $("#Contenedor").hide()
 
@@ -52,6 +57,7 @@ $("#mostrarRelato")
                         })
 
 
+//--------------        ANIMACION PARA LA CUARTA IMAGEN      -----------------------////////
 
 
                         $("#aniversario45").hide()

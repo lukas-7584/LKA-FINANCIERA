@@ -1,4 +1,5 @@
 
+/* FUNCION QUE CRE EL ARRAY  */
 
 class Prestamos{
     constructor(nombre , edad , dni , cantidadSolicitada , cantidadCuotas){
@@ -14,7 +15,7 @@ class Prestamos{
 
 
 var prestamosDados = [];
-
+/* FUNCION PRICIPAL QUE  HACE QUE TODA LA SECCION  FUNCIONE */
 function procesar(e){
 
     e.preventDefault();
@@ -49,6 +50,7 @@ function procesar(e){
     let  guardarLocal = (clave,valor) => {localStorage.setItem (clave,valor)};
     guardarLocal("Lista de Clientes", JSON.stringify(prestamosDados));
 
+// FUNCION PARA CALCULAR EKL VALOR DE LAS CUOTAS//
 
     function valorCuota(e) {
 
@@ -64,6 +66,7 @@ function procesar(e){
 
     valorCuota( )
 
+//VARIABLES CREADAS PARA INSERTAR INFORMACION EN EL HTML
 
         let contenedor = document.getElementById ("contenedor");
 
@@ -80,6 +83,8 @@ function procesar(e){
         
 
 } 
+
+// EVENTO QUE IMPIDE EL SUBMIT DE DEFAULT//
 
 $("#botonEnviar").on("click" , procesar)
 
