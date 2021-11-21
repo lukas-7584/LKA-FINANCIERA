@@ -42,15 +42,15 @@ $("#mostrarRelato")
 
                             $("#Contenedor")
 
-                                .html("<p> Una familia muy particualr querian cumplir el sueño de su hija de conocer el mar  y lo querian a los grande, ahi entramos nosotros con nuestra asesoria y pudimos  juntos cumplir es sueño de la pequeña magaliServicio muy seguro y rápido. Las mejores vacaciones de nuestras vidas gracias chicos!!!</p>")
+                                .html('<p> Una familia muy particular,ellos querían cumplir el sueño de su hija de conocer el mar. Ahí entramos nosotros para asesorarlos y juntos cumplimos el sueño de magali. "Servicio muy seguro y rápido. Las mejores vacaciones de nuestras vidas.Gracias!!!"</p')
 
-                                    .css("color" ,  "#9b59b6")
+                                    .css("color" ,  "black")
 
                                         .show(2000)
 
-                                        .delay(4000)
+                                        .delay(20000)
 
-                                            .hide(10000)
+                                            .hide(5000)
 
                                             
 
