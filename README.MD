@@ -16,5 +16,7 @@ LKA-FINANCIERA fue creada con el objetivo de ayudar  a las personas a que pueden
 
 <img src="./imagenes/IMAGENES README/javascript_icon_130900.png">
 
+PARA VER LA ULTIMA VERSION SEGUIR EL SIGUIENTE LINK https://vercel.com/lukas-7584/lka-financiera/4L1B26dqozVpNbUZ3MHM4Jz8cHBs
+
 
 **COPYRIGHT © 2022 JORGE LUCAS AMAYA**
